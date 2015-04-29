@@ -27,6 +27,7 @@
 	font-size: 11px;
 	color: white;
 	text-align: left;
+	margin-top:3px;
 }
 #signinpw{
 	width:150px;
@@ -37,8 +38,8 @@
 	border: solid black 1px;
 	padding-right:5%;
 }
-.log{
-	font-size:11px;
+#c1{
+	margin-top:1px;
 }
 .login {
 	margin-top: 15px;
