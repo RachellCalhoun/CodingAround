@@ -10,10 +10,12 @@ countslst = []
 info = json.loads(data)
 
 comments = info['comments']
-
+count = 0
 for item in comments:
   countslst.append(item['count'])
+  count += 1
 total = sum(countslst)
-print total
+print "total is: ", total
+print "count is: "  count
 
 
