@@ -1,0 +1,80 @@
+{% load staticfiles %}
+
+<!doctype html>
+    <html>
+      <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <title>Rachell Calhoun</title>
+         <link rel="shortcut icon" type="image/x-icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-04-11/9b70faf47d3f0c13a97b7d14e4c44152.ico" /> 
+         <link type="text/css" rel="stylesheet" href="{% static 'shorturl/shorturl.css'%}"/>
+         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        
+      </head>
+      
+<body>
+  <div class="grid">
+    <div class="row1">
+      <div class="col-3">
+      <p class="name">ShortUrl</p>
+      <p class="mobilename">ShortUrl</p>
+      </div>
+      <div class="col-6">
+          <p class="menubutton">Menu</p>
+            <ul class="menu">
+              <li><a href="/home">Home</a></li>
+                          </ul>
+      </div>
+      <div class="col-3">
+        <p><a class="contact" href="mailto:rachell.calhoun@gmail.com">Email me</a></p>
+      </div>
+      
+    </div>
+    
+  <div class="row2">
+    <div class="col-2">
+      
+             
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-8">
+          <h1 class="title">Your results<h1>
+          <p>http://127.0.0.1:8000/shorturl/{{new_url}}</p>
+        
+
+      </div>
+      <div class="col-1">
+      
+      </div>
+  </div>
+    
+    <div class="row3">
+      <div class="col-3">
+      </div>
+      <div class="col-9">
+        <div class="content"><p>Have a great day!</p></div>
+      </div>
+    
+  </div>
+</body>
+<footer>
+  <div class="row4">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <p class="close">All rights reserved by <em>Rachell Calhoun</em></p>
+      </div>
+      <div class="col-3"></div>
+  </div>
+</footer>
+</html>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.menubutton').on('click', function(){
+      $('.menu').toggle();
+    })
+  })
+
+</script>
