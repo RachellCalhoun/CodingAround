@@ -12,14 +12,22 @@ file_name = input("Please enter the name of the text file ie 'filename.txt': ")
 text = open(path.join(d, file_name)).read()
 
 # read the mask image
-# taken from
-# http://www.stencilry.org/stencils/movies/alice%20in%20wonderland/255fk.jpg
-#alice_mask = np.array(Image.open(path.join(d, "heart.jpg")))
+
 image_shape = input("Enter the name of your image ie 'pic.jpg': ")
 mask = np.array(Image.open(path.join(d, image_shape)))
 
-stopwords = set(STOPWORDS)
-stopwords.update(('django girls','friendly', 'workshop','open','twitter'))
+stopwords = STOPWORDS.copy()
+while True:
+
+    edit_text = input("Are there any words you don't want to show up? y/n :")
+
+    if edit_text == 'y' or edit_text == 'Y':
+        new_word = input("Write a word you don't want included: ")
+        stopwords.add(new_word)
+    elif edit_text == 'n' or edit_text == 'N':
+        break
+    else:
+        break
 
 # define our method
 chosen_color = input("Please choose a background color: black, white, red etc :")
